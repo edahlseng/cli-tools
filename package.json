@@ -1,0 +1,40 @@
+{
+  "name": "@eric.dahlseng/cli-tools",
+  "version": "0.1.0",
+  "description": "CLI Tools",
+  "main": "dist/index.js",
+  "dependencies": {
+    "fluture": "^8.0.2",
+    "inquirer": "^6.0.0",
+    "ramda": "^0.25.0",
+    "string-argv": "0.0.2"
+  },
+  "devDependencies": {
+    "@eric.dahlseng/linter-configuration": "^0.1.2",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.76.0"
+  },
+  "author": "Eric Dahlseng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eric.dahlseng/cli-tools.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf ./dist && babel lib --out-dir dist --copy-files --source-maps inline",
+    "flow": "flow check",
+    "prepare": "npm run build"
+  },
+  "babel": {
+    "presets": [
+      "flow"
+    ],
+    "plugins": [
+      "transform-es2015-modules-commonjs",
+      "transform-object-rest-spread"
+    ]
+  }
+}
