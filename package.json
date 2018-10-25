@@ -1,10 +1,10 @@
 {
   "name": "@eric.dahlseng/cli-tools",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CLI Tools",
   "main": "dist/index.js",
   "dependencies": {
-    "fluture": "^8.0.2",
+    "fluture": "^10.1.1",
     "inquirer": "^6.0.0",
     "ramda": "^0.25.0",
     "string-argv": "0.0.2"
